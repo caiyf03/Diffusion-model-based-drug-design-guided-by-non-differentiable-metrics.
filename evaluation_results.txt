@@ -1,0 +1,56 @@
+QED: 计算给定 RDKit 分子的类药性指数(Quantitative Estimate of Drug-likeness,QED)值越接近 1 表示分子越具有类药性.
+SA: 一个分子在合成方面的难易程度,分数越高, 合成越容易.
+logp: 分子在辛醇(油脂)和水中的分配系数,通常LogP值应在-0.4和5.6之间的分子,可能成为良好的候选药物。其反应了分子在油水两相中的分配情况,LogP值越大,说明该物质越亲油脂;反之则越亲水,水溶性越好.
+Lipinski: 是用于评估化合物是否具备良好口服生物利用度的经验法则，涵盖了分子量、氢键供体数量、氢键受体数量、脂水分配系数以及可旋转键数量这五个方面。越大越好
+step mol: QED: 0.608 +/- 0.04, SA: 0.696 +/- 0.16,LogP: 2.956 +/- 1.46,Lipinski: 5.000 +/- 0.00 pocket_len: 9
+step 499: QED: 0.305 +/- 0.16, SA: 0.362 +/- 0.10,LogP: 2.599 +/- 1.60,Lipinski: 4.769 +/- 0.58 pocket_len: 13
+step 490: QED: 0.309 +/- 0.13, SA: 0.413 +/- 0.11,LogP: 1.848 +/- 1.31,Lipinski: 4.867 +/- 0.34 pocket_len: 15
+step 480: QED: 0.309 +/- 0.11, SA: 0.359 +/- 0.10,LogP: 2.101 +/- 1.46,Lipinski: 4.933 +/- 0.25 pocket_len: 15
+step 470: QED: 0.328 +/- 0.12, SA: 0.392 +/- 0.10,LogP: 1.382 +/- 1.49,Lipinski: 4.929 +/- 0.26 pocket_len: 14
+step 460: QED: 0.312 +/- 0.12, SA: 0.382 +/- 0.10,LogP: 2.410 +/- 1.95,Lipinski: 4.846 +/- 0.36 pocket_len: 13
+step 450: QED: 0.278 +/- 0.17, SA: 0.341 +/- 0.08,LogP: 2.415 +/- 2.33,Lipinski: 4.692 +/- 0.72 pocket_len: 13
+step 440: QED: 0.296 +/- 0.16, SA: 0.374 +/- 0.13,LogP: 1.588 +/- 1.44,Lipinski: 4.933 +/- 0.25 pocket_len: 15
+step 430: QED: 0.271 +/- 0.13, SA: 0.439 +/- 0.12,LogP: 1.754 +/- 1.77,Lipinski: 4.929 +/- 0.26 pocket_len: 14
+step 420: QED: 0.389 +/- 0.11, SA: 0.412 +/- 0.11,LogP: 1.553 +/- 0.86,Lipinski: 5.000 +/- 0.00 pocket_len: 15
+step 410: QED: 0.310 +/- 0.13, SA: 0.429 +/- 0.10,LogP: 1.410 +/- 1.49,Lipinski: 4.947 +/- 0.22 pocket_len: 19
+step 400: QED: 0.350 +/- 0.10, SA: 0.460 +/- 0.15,LogP: 1.966 +/- 1.08,Lipinski: 5.000 +/- 0.00 pocket_len: 15
+step 390: QED: 0.355 +/- 0.09, SA: 0.425 +/- 0.08,LogP: 1.443 +/- 1.23,Lipinski: 5.000 +/- 0.00 pocket_len: 17
+step 380: QED: 0.395 +/- 0.11, SA: 0.469 +/- 0.13,LogP: 1.432 +/- 1.28,Lipinski: 4.941 +/- 0.24 pocket_len: 17
+step 370: QED: 0.384 +/- 0.11, SA: 0.511 +/- 0.15,LogP: 1.323 +/- 0.96,Lipinski: 5.000 +/- 0.00 pocket_len: 17
+step 360: QED: 0.364 +/- 0.12, SA: 0.484 +/- 0.13,LogP: 1.386 +/- 1.44,Lipinski: 5.000 +/- 0.00 pocket_len: 16
+step 350: QED: 0.374 +/- 0.10, SA: 0.410 +/- 0.09,LogP: 1.694 +/- 1.45,Lipinski: 4.947 +/- 0.22 pocket_len: 19
+step 340: QED: 0.337 +/- 0.09, SA: 0.370 +/- 0.07,LogP: 1.472 +/- 0.81,Lipinski: 4.944 +/- 0.23 pocket_len: 18
+step 330: QED: 0.379 +/- 0.10, SA: 0.443 +/- 0.11,LogP: 1.323 +/- 1.04,Lipinski: 5.000 +/- 0.00 pocket_len: 18
+step 320: QED: 0.306 +/- 0.13, SA: 0.418 +/- 0.12,LogP: 1.491 +/- 1.68,Lipinski: 4.789 +/- 0.41 pocket_len: 19
+step 310: QED: 0.339 +/- 0.09, SA: 0.429 +/- 0.13,LogP: 1.952 +/- 1.47,Lipinski: 4.944 +/- 0.23 pocket_len: 18
+step 300: QED: 0.378 +/- 0.10, SA: 0.433 +/- 0.13,LogP: 1.490 +/- 1.60,Lipinski: 5.000 +/- 0.00 pocket_len: 15
+step 290: QED: 0.389 +/- 0.14, SA: 0.392 +/- 0.10,LogP: 1.375 +/- 1.53,Lipinski: 5.000 +/- 0.00 pocket_len: 17
+step 280: QED: 0.323 +/- 0.12, SA: 0.439 +/- 0.08,LogP: 0.830 +/- 1.39,Lipinski: 5.000 +/- 0.00 pocket_len: 18
+step 270: QED: 0.306 +/- 0.10, SA: 0.396 +/- 0.11,LogP: 1.335 +/- 1.75,Lipinski: 4.950 +/- 0.22 pocket_len: 20
+step 260: QED: 0.296 +/- 0.11, SA: 0.467 +/- 0.15,LogP: 1.416 +/- 1.78,Lipinski: 4.842 +/- 0.49 pocket_len: 19
+step 250: QED: 0.358 +/- 0.09, SA: 0.412 +/- 0.12,LogP: 1.145 +/- 0.96,Lipinski: 5.000 +/- 0.00 pocket_len: 16
+step 240: QED: 0.346 +/- 0.11, SA: 0.446 +/- 0.15,LogP: 0.982 +/- 1.26,Lipinski: 5.000 +/- 0.00 pocket_len: 18
+step 230: QED: 0.306 +/- 0.08, SA: 0.396 +/- 0.10,LogP: 0.970 +/- 1.09,Lipinski: 5.000 +/- 0.00 pocket_len: 19
+step 220: QED: 0.373 +/- 0.14, SA: 0.419 +/- 0.10,LogP: 1.550 +/- 1.03,Lipinski: 5.000 +/- 0.00 pocket_len: 16
+step 210: QED: 0.371 +/- 0.07, SA: 0.325 +/- 0.07,LogP: 1.327 +/- 1.08,Lipinski: 5.000 +/- 0.00 pocket_len: 18
+step 200: QED: 0.340 +/- 0.11, SA: 0.377 +/- 0.09,LogP: 1.550 +/- 1.41,Lipinski: 4.950 +/- 0.22 pocket_len: 20
+step 190: QED: 0.391 +/- 0.10, SA: 0.374 +/- 0.06,LogP: 1.441 +/- 1.01,Lipinski: 5.000 +/- 0.00 pocket_len: 16
+step 180: QED: 0.346 +/- 0.09, SA: 0.449 +/- 0.13,LogP: 0.976 +/- 0.88,Lipinski: 5.000 +/- 0.00 pocket_len: 19
+step 170: QED: 0.341 +/- 0.09, SA: 0.438 +/- 0.11,LogP: 1.107 +/- 1.34,Lipinski: 5.000 +/- 0.00 pocket_len: 18
+step 160: QED: 0.334 +/- 0.11, SA: 0.441 +/- 0.10,LogP: 1.104 +/- 1.05,Lipinski: 5.000 +/- 0.00 pocket_len: 19
+step 150: QED: 0.376 +/- 0.09, SA: 0.510 +/- 0.13,LogP: 1.344 +/- 0.96,Lipinski: 5.000 +/- 0.00 pocket_len: 20
+step 140: QED: 0.342 +/- 0.14, SA: 0.466 +/- 0.11,LogP: 1.338 +/- 0.94,Lipinski: 5.000 +/- 0.00 pocket_len: 19
+step 130: QED: 0.359 +/- 0.12, SA: 0.474 +/- 0.13,LogP: 0.970 +/- 1.09,Lipinski: 5.000 +/- 0.00 pocket_len: 18
+step 120: QED: 0.352 +/- 0.10, SA: 0.459 +/- 0.11,LogP: 0.884 +/- 1.41,Lipinski: 4.889 +/- 0.31 pocket_len: 18
+step 110: QED: 0.395 +/- 0.11, SA: 0.484 +/- 0.15,LogP: 1.592 +/- 1.03,Lipinski: 5.000 +/- 0.00 pocket_len: 19
+step 100: QED: 0.373 +/- 0.11, SA: 0.472 +/- 0.16,LogP: 1.159 +/- 1.22,Lipinski: 4.944 +/- 0.23 pocket_len: 18
+step 90: QED: 0.379 +/- 0.12, SA: 0.462 +/- 0.18,LogP: 1.020 +/- 1.56,Lipinski: 4.895 +/- 0.31 pocket_len: 19
+step 80: QED: 0.304 +/- 0.12, SA: 0.489 +/- 0.14,LogP: 0.965 +/- 1.25,Lipinski: 4.850 +/- 0.48 pocket_len: 20
+step 70: QED: 0.317 +/- 0.11, SA: 0.509 +/- 0.14,LogP: 1.473 +/- 1.45,Lipinski: 4.947 +/- 0.22 pocket_len: 19
+step 60: QED: 0.373 +/- 0.14, SA: 0.472 +/- 0.12,LogP: 1.574 +/- 1.22,Lipinski: 5.000 +/- 0.00 pocket_len: 15
+step 50: QED: 0.321 +/- 0.18, SA: 0.461 +/- 0.13,LogP: 1.912 +/- 1.30,Lipinski: 4.833 +/- 0.50 pocket_len: 18
+step 40: QED: 0.339 +/- 0.18, SA: 0.499 +/- 0.17,LogP: 2.804 +/- 1.41,Lipinski: 4.722 +/- 0.45 pocket_len: 18
+step 30: QED: 0.388 +/- 0.17, SA: 0.575 +/- 0.09,LogP: 3.043 +/- 1.57,Lipinski: 4.933 +/- 0.25 pocket_len: 15
+step 20: QED: 0.590 +/- 0.13, SA: 0.677 +/- 0.15,LogP: 3.026 +/- 1.50,Lipinski: 5.000 +/- 0.00 pocket_len: 12
+step 10: QED: 0.613 +/- 0.05, SA: 0.691 +/- 0.15,LogP: 2.879 +/- 1.24,Lipinski: 5.000 +/- 0.00 pocket_len: 9
+step 0: QED: 0.604 +/- 0.05, SA: 0.706 +/- 0.15,LogP: 2.732 +/- 1.43,Lipinski: 5.000 +/- 0.00 pocket_len: 9
