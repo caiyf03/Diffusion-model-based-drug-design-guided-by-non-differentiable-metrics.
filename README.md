@@ -47,9 +47,7 @@ and should be placed at `/checkpoints/crossdocked_fullatom_cond.ckpt`.
 We utilize the CrossDocked dataset, with preprocessing methods detailed in the original DiffSBDD paper:  
 [https://github.com/arneschneuing/DiffSBDD?tab=readme-ov-file](https://github.com/arneschneuing/DiffSBDD?tab=readme-ov-file)
 
-For convenience, we provide a preprocessed version at:  
-`my_new_data/processed_crossdock_noH_full_temp.zip`  
-which can be directly extracted and used.
+For convenience, we provide a preprocessed version at: `my_new_data/processed_crossdock_noH_full_temp.zip` which can be directly extracted and used.
 
 ### Model Components
 1. **Newly Trained Components**  
@@ -69,7 +67,7 @@ We provide sample outputs for each task in the following directories (directly e
 ### Standard Protein-Ligand Generation
 For conventional protein pocket ligand generation tasks, run:
 ```bash
-python <path-to-file>/my_test.py --output_folder <path-to-folder> --svdd 0 --SPSA 0 
+python <path-to-file>/my_test.py --output_folder <path-to-folder> --ATP 0 --SPSA 0 e.t.c.
 ```
 
 Note: Parameters can be modified directly in my_test.py
