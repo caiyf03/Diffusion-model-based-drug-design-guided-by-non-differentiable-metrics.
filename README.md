@@ -19,13 +19,14 @@ We integrated both methods individually and in combination into the existing [Di
 Experimental results demonstrate that our methods significantly improve:
 - Molecular validity rates
 - Performance on non-differentiable drug design metrics
-
+  
+# DiffSBDD Conditional Generation Results
 ![DiffSBDD Conditional Generation Results](result/DiffSBDD-cond-pic.png)
-
+# DiffSBDD inpaint Generation Results 
 ![DiffSBDD inpaint Generation Results](result/DiffSBDD-inpaint-pic.png)
-
+# DiffSBDD Conditional Generation Table
 ![DiffSBDD Conditional Generation Table](result/DiffSBDD-cond.png)
-
+# DiffSBDD inpaint Generation Table
 ![DiffSBDD inpaint Generation Table](result/DiffSBDD-inpaint.png)
 
 ### Contributions
@@ -53,7 +54,7 @@ which can be directly extracted and used.
 ### Model Components
 1. **Newly Trained Components**  
    Our small perturbation prediction neural network checkpoint is available at:  
-   `my_logdir/SE3-cond-full/checkpoints`
+   `/RL_check_point`
 
 2. **RL Training Capability**  
    The reinforcement learning network supports online training during generation - checkpoint information will be automatically updated after each molecular generation and scoring cycle.
