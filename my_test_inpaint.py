@@ -21,6 +21,10 @@ import torch
 def main():
     parser = argparse.ArgumentParser(
         description="批量运行 inpaint.py，进行配体 inpainting")
+    parser.add_argument("--operate_file", type=str, default="DiffSBDD/inpaint.py",
+                        help="checkpoint")
+    parser.add_argument("--checkpoint", type=str, default="DiffSBDD/checkpoints/crossdocked_fullatom_cond.ckpt",
+                        help="checkpoint")
     parser.add_argument("--input_folder", type=str, default="DiffSBDD/my_new_data/processed_crossdock_noH_full_temp/test",
                         help="输入文件夹路径，包含pdb、sdf、txt文件")
     parser.add_argument("--output_folder", type=str, required=True,
@@ -35,8 +39,8 @@ def main():
         "--add_n_nodes", type=int, default=10,
         help="每个样本额外添加的节点数")
     parser.add_argument(
-        "--svdd", type=int, default=0, choices=[0,1],
-        help="是否启用 SVDD (0/1)")
+        "--ATP", type=int, default=0, choices=[0,1],
+        help="ATP (0/1)")
     parser.add_argument(
         "--timesteps", type=int, default=60,
         help="denoising 步数，不传则使用训练时的 diffusion_steps")
@@ -49,7 +53,7 @@ def main():
     args = parser.parse_args()
 
     # 定义基础命令
-    base_command = "python DiffSBDD/inpaint.py DiffSBDD/checkpoints/crossdocked_fullatom_cond.ckpt"
+    base_command = "python "
     # 创建输出文件夹
     if not os.path.exists(args.output_folder):
         os.makedirs(args.output_folder)
@@ -84,6 +88,8 @@ def main():
         # 构建完整命令
         cmd = (
             f"{base_command} "
+            f"{args.operate_file} "
+            f"{args.checkpoint} "
             f"--pdbfile {pdb_path} "
             f"--outfile {outfile} "
             f"--ref_ligand {sdf_file} "
@@ -92,7 +98,7 @@ def main():
             f"--add_n_nodes {args.add_n_nodes} "
             f"--timesteps {args.timesteps} "
             f"--resamplings {args.resamplings} "
-            f"--svdd {args.svdd} "
+            f"--svdd {args.ATP} "
             f"--n_samples {args.n_samples} "
         )
         os.system(cmd)
