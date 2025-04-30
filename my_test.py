@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 """
 该脚本用于调用 generate_ligands.py，并对输入文件夹中的文件进行处理。
-可以通过命令行传入输出文件夹、SVDD和SPSA参数。
+可以通过命令行传入输出文件夹、ATP和SPSA参数。
 示例：
-    python run_generate.py --output_folder DiffSBDD/my_example_SVDD_0/test_4 --svdd 1 --SPSA 0
+    python run_generate.py --output_folder DiffSBDD/my_example_SVDD_0/test_4 --ATP 1 --SPSA 0
 """
 
 import os
@@ -14,19 +14,23 @@ import torch
 
 def main():
     parser = argparse.ArgumentParser(description="Run ligand generation with custom parameters")
+    parser.add_argument("--operate_file", type=str, default="DiffSBDD/generate_ligands.py",
+                        help="checkpoint")
+    parser.add_argument("--checkpoint", type=str, default="DiffSBDD/checkpoints/crossdocked_fullatom_cond.ckpt",
+                        help="checkpoint")
     parser.add_argument("--input_folder", type=str, default="DiffSBDD/my_new_data/processed_crossdock_noH_full_temp/test",
                         help="输入文件夹路径，包含pdb、sdf、txt文件")
     parser.add_argument("--output_folder", type=str, required=True,
                         help="输出文件夹路径，将生成的 sdf 文件写入此文件夹")
-    parser.add_argument("--svdd", type=int, default=1, help="SVDD参数")
+    parser.add_argument("--ATP", type=int, default=1, help="SVDD参数")
     parser.add_argument("--SPSA", type=int, default=0, help="SPSA参数")
     parser.add_argument("--optimize", type=int, default=0, help="optimize参数")
     parser.add_argument("--path", type=str, default="DiffSBDD/RL_check_point/calculate1.pth", help="path参数")
-    parser.add_argument("--path_save", type=str, default=None, help="path_save参数")
+    parser.add_argument("--path_save", type=str, default="DiffSBDD/RL_check_point/final.pth", help="path_save参数")
     args = parser.parse_args()
 
     # 定义基础命令
-    base_command = "python DiffSBDD/generate_ligands.py DiffSBDD/checkpoints/crossdocked_fullatom_cond.ckpt"
+    base_command = "python "
     #base_command = "python DiffSBDD/generate_ligands.py DiffSBDD/my_logdir/SE3-cond-full/checkpoints/best-model-epoch=epoch=17.ckpt"
 
     input_folder = args.input_folder
@@ -34,7 +38,7 @@ def main():
     optimize = args.optimize
     path = args.path
     path_save = args.path_save
-    svdd = args.svdd
+    svdd = args.ATP
     SPSA = args.SPSA
 
     # 创建输出文件夹
@@ -76,7 +80,9 @@ def main():
 
         # 构建完整命令
         full_command = (
-            f"{base_command} --pdbfile {pdbfile} --outfile {outfile} "
+            f"{base_command} "
+            f"{args.operate_file} {args.checkpoint} "
+            f"--pdbfile {pdbfile} --outfile {outfile} "
             f"--ref_ligand {sdf_file} --n_samples 20 --optimize {optimize} "
             f"--path {path} --SVDD {svdd} --SPSA {SPSA} --timesteps 600"
         )
