@@ -6,10 +6,10 @@ This study proposes two plug-and-play optimization strategies that can be seamle
 
 1. **Zero-order Optimization via Gradient Approximation (SPSA)**  
    This strategy applies symmetric multi-scale noise perturbations to intermediate samples and estimates gradient direction using finite differences of comprehensive metrics. The estimated gradient is then incorporated as a guidance term into the sample mean update of the original diffusion model.
-
+![SPSA](result/SPSA.png)
 2. **Adaptive Trajectory Pruning (ATP)**  
    This approach dynamically selects sub-trajectories with higher metric scores and structural stability by simultaneously sampling multiple candidate samples during the denoising process, combined with a multi-step lookahead denoising strategy for sample evaluation.
-
+![ATP](result/ATP.png)
 ### Implementation & Evaluation
 
 We integrated both methods individually and in combination into the existing [DiffSBDD framework](https://drive.google.com/drive/folders/1CzwxmTpjbrt83z_wBzcQncq84OVDPurM). Comparative experiments were conducted on the CrossDocked dataset against baseline models across various drug design metrics.
