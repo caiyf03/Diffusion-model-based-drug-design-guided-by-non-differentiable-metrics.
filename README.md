@@ -19,9 +19,13 @@ We integrated both methods individually and in combination into the existing [Di
 Experimental results demonstrate that our methods significantly improve:
 - Molecular validity rates
 - Performance on non-differentiable drug design metrics
+
 ![DiffSBDD Conditional Generation Results](result/DiffSBDD-cond-pic.png)
+
 ![DiffSBDD inpaint Generation Results](result/DiffSBDD-inpaint-pic.png)
+
 ![DiffSBDD Conditional Generation Table](result/DiffSBDD-cond.png)
+
 ![DiffSBDD inpaint Generation Table](result/DiffSBDD-inpaint.png)
 ### Contributions
 
