@@ -25,9 +25,9 @@ Experimental results demonstrate that our methods significantly improve:
 # DiffSBDD inpaint Generation Results 
 ![DiffSBDD inpaint Generation Results](result/DiffSBDD-inpaint-pic.png)
 # DiffSBDD Conditional Generation Table
-![DiffSBDD Conditional Generation Table](result/DiffSBDD-cond.png)
+![DiffSBDD Conditional Generation Table](result/cond_t.png)
 # DiffSBDD inpaint Generation Table
-![DiffSBDD inpaint Generation Table](result/DiffSBDD-inpaint.png)
+![DiffSBDD inpaint Generation Table](result/inpaint_t.png)
 
 ### Contributions
 
