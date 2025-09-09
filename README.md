@@ -1,11 +1,27 @@
 # DiffNDM: Diffusion model based drug design guided by non-differentiable metrics.
 
-This study proposes two plug-and-play optimization strategies that can be seamlessly integrated into existing diffusion models (DiffSBDD). GitHub repository: [https://github.com/arneschneuing/DiffSBDD](https://github.com/arneschneuing/DiffSBDD).
+Structure-Based Drug Design (SBDD) is a methodology that use the three-dimensional
+structural information of protein binding pockets to design high-affinity targeted small-molecule
+drug ligands. In recent years, diffusion models like DiffSBDD (Diffusion model for Structure
+based drug design) have demonstrated considerable potential in this area due to their strong
+transferability and high controllability. These algorithms abstract the task as a three-dimensional
+conditional probability modeling problem, enabling protein pocket-specific molecular generation. However, traditional drug design evaluation metrics (e.g., Quantitative Estimate of Drug-likeness, QED, and Synthetic Accessibility, SA) are often non-differentiable, which makes it difficult for
+diffusion models to directly optimize candidate molecules' drug properties through gradient-based
+updates during denoising steps. This problem significantly limits the quality of generated
+molecules in terms of key pharmacological characteristics. 
+
+In order to handle this problem, we propose a plug-and-play optimization algorithm, which is
+constructed by two basic thoughts: the Simultaneous Perturbation Stochastic Approximation
+(SPSA)-based gradient approximation method, and the Adaptive Trajectory Pruning (ATP)
+method. In order to validate the effectiveness of the proposed method, we integrated the strategy
+into the baseline DiffSBDD and conducted systematic comparisons on the CrossDocked dataset. The results demonstrated that our approach significantly improves both molecular validity and
+scores of multiple non-differentiable drug metrics. These findings indicate that the proposed
+strategy offers a novel framework for the non-differentiable metric guided molecular generation, which holds substantial theoretical value and practical potential for structure-based drug design.
 
 ### Proposed Methods
 
 1. **Zero-order Optimization via Gradient Approximation (SPSA)**  
-   This strategy applies symmetric multi-scale noise perturbations to intermediate samples and estimates gradient direction using finite differences of comprehensive metrics. The estimated gradient is then incorporated as a guidance term into the sample mean update of the original diffusion model.
+   This strategy applies symmetric multi-scale noise perturbations to intermediate samples and estimates gradient direction using finite differences of comprehensive metrics. The estimated gradient is then incorporated as a guidance term into the sample mean update of the original diffusion model. On this foundational concept, I have implemented three innovative improvements: a multiple perturbation averaging strategy, multi-scale perturbation ζ, and reinforcement learning-based perturbation optimization.
 ![SPSA](result/SPSA.png)
 2. **Adaptive Trajectory Pruning (ATP)**  
    This approach dynamically selects sub-trajectories with higher metric scores and structural stability by simultaneously sampling multiple candidate samples during the denoising process, combined with a multi-step lookahead denoising strategy for sample evaluation.
