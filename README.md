@@ -1,6 +1,8 @@
+The main text of the paper can be found at:  [基于不可微指标引导扩散模型的结构药物设计.pdf](蔡逸凡-2021533087-基于不可微指标引导扩散模型的结构药物设计.pdf)。
+
 # DiffNDM: Diffusion model based drug design guided by non-differentiable metrics.
 
-Structure-Based Drug Design (SBDD) is a methodology that use the three-dimensional
+   Structure-Based Drug Design (SBDD) is a methodology that use the three-dimensional
 structural information of protein binding pockets to design high-affinity targeted small-molecule
 drug ligands. In recent years, diffusion models like DiffSBDD (Diffusion model for Structure
 based drug design) have demonstrated considerable potential in this area due to their strong
@@ -10,7 +12,7 @@ diffusion models to directly optimize candidate molecules' drug properties throu
 updates during denoising steps. This problem significantly limits the quality of generated
 molecules in terms of key pharmacological characteristics. 
 
-In order to handle this problem, we propose a plug-and-play optimization algorithm, which is
+   In order to handle this problem, we propose a plug-and-play optimization algorithm, which is
 constructed by two basic thoughts: the Simultaneous Perturbation Stochastic Approximation
 (SPSA)-based gradient approximation method, and the Adaptive Trajectory Pruning (ATP)
 method. In order to validate the effectiveness of the proposed method, we integrated the strategy
