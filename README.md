@@ -1,4 +1,4 @@
-The main text of the paper can be found at:  [基于不可微指标引导扩散模型的结构药物设计.pdf](蔡逸凡-2021533087-基于不可微指标引导扩散模型的结构药物设计.pdf)。
+The main text of the paper can be found at:  [基于不可微指标引导扩散模型的结构药物设计.pdf](蔡逸凡-2021533087-基于不可微指标引导扩散模型的结构药物设计.pdf)
 
 # DiffNDM: Diffusion model based drug design guided by non-differentiable metrics.
 
